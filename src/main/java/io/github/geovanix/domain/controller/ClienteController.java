@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Date;
 import java.util.List;
 
 /*
@@ -33,6 +34,12 @@ public class ClienteController {
                        "Cliente não encontrando."));
 
     }
+
+    @GetMapping("/currentDate")
+    public Date getCurrentDate(){
+        return new Date();
+    }
+
 
     //Metodo Salvar
     @PostMapping
